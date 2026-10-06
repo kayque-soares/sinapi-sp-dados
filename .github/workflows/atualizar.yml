@@ -1,0 +1,33 @@
+name: Atualizar SINAPI SP
+on:
+  schedule:
+    # A Caixa publica entre os dias 5 e 15; checa diariamente do dia 3 ao 25, 12:00 UTC.
+    - cron: "0 12 3-25 * *"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency: atualizar-sinapi
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci || npm install
+      - name: Buscar pacote mais recente na Caixa
+        id: buscar
+        run: echo "competencia=$(node scripts/buscar-caixa.mjs | tail -1)" >> "$GITHUB_OUTPUT"
+      - name: Extrair São Paulo e publicar
+        if: steps.buscar.outputs.competencia != 'nada'
+        run: |
+          node --max-old-space-size=6144 scripts/extrair.mjs sinapi.zip
+          node scripts/indice.mjs
+          rm -f sinapi.zip
+          git config user.name "sinapi-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data latest.json index.json
+          git commit -m "SINAPI SP ${{ steps.buscar.outputs.competencia }}"
+          git push

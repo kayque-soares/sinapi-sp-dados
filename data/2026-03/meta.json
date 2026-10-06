@@ -1,0 +1,24 @@
+{
+  "fonte": "SINAPI - Caixa Econômica Federal",
+  "uf": "SP",
+  "competencia": "2026-03",
+  "emissao": "10/04/2026",
+  "gerado_em": "2026-10-06T13:46:06.018Z",
+  "contagens": {
+    "insumos": 6009,
+    "insumos_com_preco_sd": 4855,
+    "composicoes": 10284,
+    "composicoes_com_custo_sd": 10284,
+    "estrutura": 54529
+  },
+  "sha256": {
+    "insumos": "647fc372430e22a73aa36a375e50e6a7e038351df52f526ca5b4f63b41c7cbce",
+    "composicoes": "0a90aaa012c9436e005c4beb5710c14f80f3a22f7ed891a84784c6fe012f635a",
+    "estrutura": "d176db171b916e0e020d94af070b186145126f5fd1411019db06794b33bd256d"
+  },
+  "arquivos": [
+    "data/2026-03/insumos.json",
+    "data/2026-03/composicoes.json",
+    "data/2026-03/estrutura.json"
+  ]
+}

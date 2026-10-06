@@ -1,0 +1,13 @@
+{
+  "name": "sinapi-sp-dados",
+  "private": true,
+  "type": "module",
+  "description": "Dados públicos do SINAPI (Caixa) para São Paulo, normalizados em JSON",
+  "scripts": {
+    "extrair": "node scripts/extrair.mjs"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}
