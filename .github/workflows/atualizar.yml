@@ -23,11 +23,12 @@ jobs:
       - name: Extrair São Paulo e publicar
         if: steps.buscar.outputs.competencia != 'nada'
         run: |
+          node scripts/cadernos.mjs
           node --max-old-space-size=6144 scripts/extrair.mjs sinapi.zip
           node scripts/indice.mjs
           rm -f sinapi.zip
           git config user.name "sinapi-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data latest.json index.json
+          git add data latest.json index.json cadernos.json
           git commit -m "SINAPI SP ${{ steps.buscar.outputs.competencia }}"
           git push

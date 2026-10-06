@@ -7,10 +7,11 @@
 // ISD/ICD (insumos sem/com desoneração), CSD/CCD (composições) e Analítico (estrutura).
 // Se o layout mudar, o script aborta em vez de gerar dados errados.
 import { createHash } from "node:crypto";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { unzipSync } from "fflate";
 import XLSX from "xlsx";
+import { slugGrupo } from "./grupo.mjs";
 
 const UF = "SP";
 const entrada = process.argv[2];
@@ -154,6 +155,13 @@ for (const e of extras.values()) {
   else insumos.push({ c: e.c, d: e.d, u: e.u, cl: "", sd: null, cd: null, s: e.s });
 }
 
+// Caderno Técnico da Caixa pelo grupo da composição (cadernos.json gerado por scripts/cadernos.mjs).
+const cadernos = existsSync("cadernos.json") ? JSON.parse(readFileSync("cadernos.json", "utf8")) : {};
+for (const c of composicoes) {
+  const url = c.g ? cadernos[slugGrupo(c.g)] : undefined;
+  if (url) c.ct = url;
+}
+
 exigir(insumos.length > 3000, `poucos insumos (${insumos.length})`);
 exigir(composicoes.length > 5000, `poucas composições (${composicoes.length})`);
 exigir(estrutura.length > 30000, `estrutura analítica pequena (${estrutura.length})`);
@@ -179,6 +187,7 @@ const meta = {
     insumos_com_preco_sd: insumos.filter((i) => i.sd !== null).length,
     composicoes: composicoes.length,
     composicoes_com_custo_sd: composicoes.filter((c) => c.sd !== null).length,
+    composicoes_com_caderno: composicoes.filter((c) => c.ct).length,
     estrutura: estrutura.length,
   },
   sha256: hashes,
