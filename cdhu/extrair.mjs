@@ -94,6 +94,27 @@ function registros(itens, { xCodigo, xDescricao, colunas }) {
   return saida;
 }
 
+// Nomes de grupos (NN) e subgrupos (NN.NN), se o relatório de subgrupos estiver na pasta.
+const arqSubgrupos = arquivos.find((n) => /^subgrupos\.\d+\.pdf$/i.test(n));
+const nomesGrupo = new Map();
+if (arqSubgrupos) {
+  // Código e nome ficam na mesma linha, com diferença de alguns décimos de ponto na altura.
+  const itens = await itensPdf(join(pasta, arqSubgrupos));
+  for (const cod of itens.filter((i) => /^\d{2}(\.\d{2})?$/.test(i.s) && i.x < 120)) {
+    const nome = itens
+      .filter((i) => i.p === cod.p && Math.abs(i.y - cod.y) < 2 && i.x > cod.x + 20)
+      .sort((a, b) => a.x - b.x)
+      .map((i) => i.s)
+      .join(" ")
+      .trim();
+    if (nome) nomesGrupo.set(cod.s, nome);
+  }
+}
+const nomeGrupo = (codigo) => {
+  const partes = [nomesGrupo.get(codigo.slice(0, 2)), nomesGrupo.get(codigo.slice(0, 5))].filter(Boolean);
+  return partes.length ? partes.join(" › ") : null;
+};
+
 const [itInsumos, itServicos, itComposicao] = await Promise.all([
   itensPdf(achar(/^insumos\.\d+\.pdf$/i)),
   itensPdf(achar(/^servicos\.\d+-sd\.pdf$/i)),
@@ -144,6 +165,7 @@ const composicoes = registros(itServicos, {
   d: r.descricao,
   u: r.unidade,
   g: r.codigo.slice(0, 5),
+  gn: nomeGrupo(r.codigo),
   p: num(r.total),
   mat: num(r.material),
   mo: num(r.mao_obra),
@@ -211,6 +233,7 @@ const meta = {
   contagens: {
     insumos: insumos.length,
     composicoes: composicoes.length,
+    composicoes_com_grupo: composicoes.filter((c) => c.gn).length,
     estrutura: estrutura.length,
     servicos_conferidos: batem,
     servicos_divergentes: divergentes.length,

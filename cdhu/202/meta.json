@@ -9,6 +9,7 @@
   "contagens": {
     "insumos": 3233,
     "composicoes": 3566,
+    "composicoes_com_grupo": 3566,
     "estrutura": 14435,
     "servicos_conferidos": 3565,
     "servicos_divergentes": 1
@@ -16,5 +17,5 @@
   "divergentes": [
     "01.20.901: calculado 0.22 x oficial 0.23"
   ],
-  "gerado_em": "2026-10-08T14:53:36.654Z"
+  "gerado_em": "2026-10-08T15:05:22.284Z"
 }
