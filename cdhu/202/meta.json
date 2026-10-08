@@ -1,0 +1,20 @@
+{
+  "fonte": "CDHU - Boletim Referencial de Custos",
+  "versao": 202,
+  "competencia": "2026-05",
+  "data_base": "MAIO/26",
+  "desonerada": false,
+  "leis_sociais": 1.2823,
+  "observacao": "Mão de obra horária (B.01, unidade H) já inclui as Leis Sociais; p0 é o preço do relatório de insumos.",
+  "contagens": {
+    "insumos": 3233,
+    "composicoes": 3566,
+    "estrutura": 14435,
+    "servicos_conferidos": 3565,
+    "servicos_divergentes": 1
+  },
+  "divergentes": [
+    "01.20.901: calculado 0.22 x oficial 0.23"
+  ],
+  "gerado_em": "2026-10-08T14:53:36.654Z"
+}

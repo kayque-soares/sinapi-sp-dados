@@ -11,3 +11,16 @@ desoneração.
 
 Uma GitHub Action consulta diariamente (dias 3 a 25) a API de downloads da Caixa e publica a nova
 competência assim que sai. Fonte: <https://www.caixa.gov.br/sinapi>.
+
+## CDHU — Boletim Referencial de Custos (SP)
+
+A CDHU publica o boletim em PDF. `cdhu/extrair.mjs` lê os PDFs pela posição do texto na página e grava
+`cdhu/<versão>/{insumos,composicoes,estrutura,meta}.json` e `cdhu/index.json`:
+
+```bash
+node cdhu/extrair.mjs <pasta com insumos.NNN.pdf, servicos.NNN-sd.pdf e composicao.NNN.pdf>
+```
+
+- Versão, data-base e Leis Sociais são lidas do próprio PDF.
+- Mão de obra horária (B.01, unidade H) é gravada já com Leis Sociais (`p`); `p0` guarda o preço do relatório de insumos.
+- O script aborta se Σ coeficiente × preço não reproduzir o custo oficial de pelo menos 99% dos serviços.
