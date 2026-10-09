@@ -34,7 +34,7 @@ function classe(codigo, unidade) {
   return "MATERIAL";
 }
 
-function agruparLinhas(itens, tolerancia = 3.5) {
+function agruparLinhas(itens, tolerancia = 9.0) {
   const lista = [...itens].sort((a, b) => a.y - b.y || a.x - b.x);
   const linhas = [];
   for (const item of lista) {

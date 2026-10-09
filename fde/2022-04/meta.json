@@ -1,0 +1,30 @@
+{
+  "fonte": "FDE - Tabela de Composição",
+  "fonte_publica": "https://registro.sp.gov.br/publicacoes/docs/445_Anexo%20I%20-%20Termo%20de%20Refer%C3%AAncia%20-%20Tabela-FDE-Abril-2022.pdf",
+  "competencia": "2022-04",
+  "referencia": "abril/2022",
+  "leis_sociais": 1.2087,
+  "bdi": 0.23,
+  "paginas": 404,
+  "sha256_pdf": "7d7e6e08d340eded8ea224e71bf8ead032a563a7a6830cb256451b1098b562f7",
+  "contagens": {
+    "insumos": 2241,
+    "composicoes": 3165,
+    "estrutura": 17653,
+    "status_precos": {
+      "DIVERGENTE": 116,
+      "NAO_DETERMINADO": 1272,
+      "DERIVADO": 813,
+      "CONFIRMADO": 40
+    },
+    "validacao": {
+      "composicoes": 3165,
+      "ok": 299,
+      "incompletas": 2866,
+      "divergentes": 0,
+      "percentual_ok_total": 9.4471,
+      "percentual_ok_das_completas": 100
+    }
+  },
+  "gerado_em": "2026-10-09T21:30:16.355Z"
+}
