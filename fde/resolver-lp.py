@@ -6,7 +6,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy.optimize import linprog
-from scipy.sparse import lil_matrix, vstack
+from scipy.sparse import lil_matrix, vstack, hstack, csr_matrix
 
 base = Path(sys.argv[1] if len(sys.argv) > 1 else "fde/2022-04")
 FATOR_BDI = 1.23
@@ -27,9 +27,9 @@ for e in estrutura:
 
 # Restrições oficiais de truncamento:
 #   C/1.23 <= sum(k*p) < (C+0.01)/1.23
-# Para LP usamos o limite superior fechado com epsilon microscópico.
 rows = []
 ubs = []
+comps_com_linha = []
 for c in composicoes:
     itens = coef_por.get(c["c"], {})
     if not itens:
@@ -43,6 +43,7 @@ for c in composicoes:
     ubs.append(hi)
     rows.append((-row).tocsr())
     ubs.append(-lo)
+    comps_com_linha.append(c["c"])
 
 A_ub = vstack(rows, format="csr")
 b_ub = np.asarray(ubs, dtype=float)
@@ -65,9 +66,6 @@ if not viavel.success:
     raise RuntimeError(f"Sistema FDE inviável com as faixas atuais: {viavel.message}")
 x_viavel = viavel.x
 
-# Ajusta o ponto armazenado dos preços já utilizáveis para um vetor que satisfaz
-# simultaneamente todas as composições. Mantemos 12 casas internamente porque
-# diversas restrições ficam exatamente na fronteira de truncamento de centavos.
 for j, i in enumerate(insumos):
     if i.get("status") in {"CONFIRMADO", "DERIVADO"}:
         i["p"] = round(float(x_viavel[j]), PRECISAO_INTERNA)
@@ -75,8 +73,7 @@ for j, i in enumerate(insumos):
         i["solucao_global"] = True
 
 # Componentes de incógnitas atuais. Calculamos intervalos LP exatos apenas nos
-# componentes pequenos/médios. O grande bloco fica explicitamente pendente,
-# evitando milhares de otimizações e, sobretudo, falsa precisão.
+# componentes pequenos/médios; o grande bloco permanece pendente.
 desconhecidos = {i["c"] for i in insumos if i.get("status") == "NAO_DETERMINADO"}
 parent = {c: c for c in desconhecidos}
 tam = {c: 1 for c in desconhecidos}
@@ -132,8 +129,6 @@ for vars_ in sorted(grupos.values(), key=len):
         i = insumos[j]
         i["faixa_lp"] = [round(lo, PRECISAO_INTERNA), round(hi, PRECISAO_INTERNA)]
         i["largura_lp"] = round(largura, PRECISAO_INTERNA)
-        # Só promovemos se a faixa GLOBAL é estreita. CONFIRMADO exige pelo menos
-        # duas aparições da variável no catálogo; DERIVADO aceita uma.
         evid = sum(1 for itens in coef_por.values() if codigo in itens)
         if evid >= 2 and largura <= 0.0050001:
             i["status"] = "CONFIRMADO"
@@ -148,8 +143,7 @@ for vars_ in sorted(grupos.values(), key=len):
         i["metodo"] = "LP_GLOBAL_TRUNCAMENTO_FDE"
         promovidos.append(codigo)
 
-# Com novos bounds estreitos, buscamos novamente um ponto global viável para
-# todos os preços classificados, mantendo desconhecidos livres.
+# Novos bounds após as promoções.
 bounds2 = []
 for i in insumos:
     faixa = i.get("faixa")
@@ -158,23 +152,45 @@ for i in insumos:
     else:
         bounds2.append((0.0, None))
 
-viavel2 = linprog(zero, A_ub=A_ub, b_ub=b_ub, bounds=bounds2, method="highs")
-if not viavel2.success:
-    raise RuntimeError(f"Sistema tornou-se inviável após promoção LP: {viavel2.message}")
-x2 = viavel2.x
+# Em vez de aceitar um ponto que encoste na fronteira, maximizamos uma margem t
+# para TODAS as composições cujos insumos já têm preço classificado. Com isso o
+# JSON publicado permanece estável mesmo após serialização em ponto flutuante.
+utilizaveis = {i["c"] for i in insumos if i.get("status") in {"CONFIRMADO", "DERIVADO"}}
+tcol = np.zeros(A_ub.shape[0], dtype=float)
+completas_para_margem = 0
+for pos, cod_comp in enumerate(comps_com_linha):
+    itens = coef_por[cod_comp]
+    completa = all(cod_i in utilizaveis for cod_i in itens)
+    if completa:
+        tcol[2 * pos] = 1.0
+        tcol[2 * pos + 1] = 1.0
+        completas_para_margem += 1
+
+A_interior = hstack([A_ub, csr_matrix(tcol).T], format="csr")
+obj_interior = np.zeros(n + 1, dtype=float)
+obj_interior[-1] = -1.0
+largura_meia = 0.01 / FATOR_BDI / 2.0
+bounds_interior = bounds2 + [(0.0, largura_meia - 1e-10)]
+interior = linprog(obj_interior, A_ub=A_interior, b_ub=b_ub, bounds=bounds_interior, method="highs")
+if not interior.success:
+    raise RuntimeError(f"Não foi possível construir ponto interior FDE: {interior.message}")
+x2 = interior.x[:n]
+margem_interior = float(interior.x[-1])
+
 for j, i in enumerate(insumos):
     if i.get("status") in {"CONFIRMADO", "DERIVADO"}:
         i["p"] = round(float(x2[j]), PRECISAO_INTERNA)
         i["p_sem_bdi"] = i["p"]
         i["solucao_global"] = True
 
-# Valida com os mesmos valores de alta precisão que serão publicados no JSON.
+# Valida com os mesmos valores de alta precisão publicados no JSON.
 def trunc2(v):
     return math.floor((v + 1e-10) * 100.0) / 100.0
 
 precos = {i["c"]: i.get("p") for i in insumos if i.get("p") is not None}
 linhas = []
 ok = incompletas = divergentes = 0
+amostra_divergentes = []
 for c in composicoes:
     itens = coef_por.get(c["c"], {})
     faltantes = sorted(cod_i for cod_i in itens if cod_i not in precos)
@@ -190,6 +206,8 @@ for c in composicoes:
         ok += 1
     else:
         divergentes += 1
+        if len(amostra_divergentes) < 50:
+            amostra_divergentes.append({"c": c["c"], "oficial": c["p"], "recalculado": publicado, "bruto": com_bdi})
     linhas.append({
         "c": c["c"], "oficial": c["p"], "custo_sem_bdi": round(sem_bdi, PRECISAO_INTERNA),
         "recalculado_com_bdi": round(com_bdi, PRECISAO_INTERNA), "publicado_recalculado": round(publicado, 2),
@@ -222,6 +240,9 @@ meta["lp_global"] = {
     "intervalos_calculados": intervalos_lp,
     "falhas": falhas_lp,
     "precos_promovidos": len(promovidos),
+    "composicoes_com_margem": completas_para_margem,
+    "margem_interior_sem_bdi": margem_interior,
+    "divergentes_amostra": amostra_divergentes,
     "promovidos_amostra": promovidos[:100],
 }
 meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2))
@@ -231,6 +252,7 @@ print(json.dumps({
     "intervalos_lp": intervalos_lp,
     "falhas_lp": falhas_lp,
     "promovidos": len(promovidos),
+    "margem_interior_sem_bdi": margem_interior,
     "status_precos": dict(status),
     "validacao": resumo_validacao,
 }, ensure_ascii=False, indent=2))
