@@ -11,6 +11,7 @@ from scipy.sparse import lil_matrix, vstack
 base = Path(sys.argv[1] if len(sys.argv) > 1 else "fde/2022-04")
 FATOR_BDI = 1.23
 MAX_COMPONENTE_PARA_INTERVALOS = 60
+PRECISAO_INTERNA = 12
 
 insumos = json.loads((base / "insumos.json").read_text())
 composicoes = json.loads((base / "composicoes.json").read_text())
@@ -65,10 +66,11 @@ if not viavel.success:
 x_viavel = viavel.x
 
 # Ajusta o ponto armazenado dos preços já utilizáveis para um vetor que satisfaz
-# simultaneamente todas as composições. Status não é promovido por este passo.
+# simultaneamente todas as composições. Mantemos 12 casas internamente porque
+# diversas restrições ficam exatamente na fronteira de truncamento de centavos.
 for j, i in enumerate(insumos):
     if i.get("status") in {"CONFIRMADO", "DERIVADO"}:
-        i["p"] = round(float(x_viavel[j]), 6)
+        i["p"] = round(float(x_viavel[j]), PRECISAO_INTERNA)
         i["p_sem_bdi"] = i["p"]
         i["solucao_global"] = True
 
@@ -128,8 +130,8 @@ for vars_ in sorted(grupos.values(), key=len):
         intervalos_lp += 1
         largura = hi - lo
         i = insumos[j]
-        i["faixa_lp"] = [round(lo, 6), round(hi, 6)]
-        i["largura_lp"] = round(largura, 8)
+        i["faixa_lp"] = [round(lo, PRECISAO_INTERNA), round(hi, PRECISAO_INTERNA)]
+        i["largura_lp"] = round(largura, PRECISAO_INTERNA)
         # Só promovemos se a faixa GLOBAL é estreita. CONFIRMADO exige pelo menos
         # duas aparições da variável no catálogo; DERIVADO aceita uma.
         evid = sum(1 for itens in coef_por.values() if codigo in itens)
@@ -139,9 +141,9 @@ for vars_ in sorted(grupos.values(), key=len):
             i["status"] = "DERIVADO"
         else:
             continue
-        i["p"] = round((lo + hi) / 2, 6)
+        i["p"] = round((lo + hi) / 2, PRECISAO_INTERNA)
         i["p_sem_bdi"] = i["p"]
-        i["faixa"] = [round(lo, 6), round(hi, 6)]
+        i["faixa"] = [round(lo, PRECISAO_INTERNA), round(hi, PRECISAO_INTERNA)]
         i["evidencias"] = evid
         i["metodo"] = "LP_GLOBAL_TRUNCAMENTO_FDE"
         promovidos.append(codigo)
@@ -162,14 +164,13 @@ if not viavel2.success:
 x2 = viavel2.x
 for j, i in enumerate(insumos):
     if i.get("status") in {"CONFIRMADO", "DERIVADO"}:
-        i["p"] = round(float(x2[j]), 6)
+        i["p"] = round(float(x2[j]), PRECISAO_INTERNA)
         i["p_sem_bdi"] = i["p"]
         i["solucao_global"] = True
 
-# Valida apenas composições cujos insumos estão todos classificados. Como o ponto
-# vem do LP global, todas devem reproduzir o custo oficial por truncamento.
+# Valida com os mesmos valores de alta precisão que serão publicados no JSON.
 def trunc2(v):
-    return math.floor((v + 1e-8) * 100.0) / 100.0
+    return math.floor((v + 1e-10) * 100.0) / 100.0
 
 precos = {i["c"]: i.get("p") for i in insumos if i.get("p") is not None}
 linhas = []
@@ -190,8 +191,8 @@ for c in composicoes:
     else:
         divergentes += 1
     linhas.append({
-        "c": c["c"], "oficial": c["p"], "custo_sem_bdi": round(sem_bdi, 6),
-        "recalculado_com_bdi": round(com_bdi, 6), "publicado_recalculado": round(publicado, 2),
+        "c": c["c"], "oficial": c["p"], "custo_sem_bdi": round(sem_bdi, PRECISAO_INTERNA),
+        "recalculado_com_bdi": round(com_bdi, PRECISAO_INTERNA), "publicado_recalculado": round(publicado, 2),
         "diferenca": round(publicado - float(c["p"]), 4),
         "situacao": "OK" if bate else "DIVERGENTE", "insumos_sem_preco": []
     })
@@ -216,6 +217,7 @@ meta["contagens"]["status_precos"] = dict(status)
 meta["contagens"]["validacao"] = resumo_validacao
 meta["lp_global"] = {
     "viavel": True,
+    "precisao_interna_casas": PRECISAO_INTERNA,
     "componentes_analisados_ate": MAX_COMPONENTE_PARA_INTERVALOS,
     "intervalos_calculados": intervalos_lp,
     "falhas": falhas_lp,
