@@ -8,6 +8,7 @@ on:
       - fde/extrair-v2.mjs
       - fde/analisar-sistema.py
       - fde/testar-solucao-global.py
+      - fde/diagnosticar-centavos.py
       - .github/workflows/fde-2022-04.yml
   workflow_dispatch: {}
 
@@ -48,6 +49,9 @@ jobs:
       - name: Extrair, reconstruir preços determináveis e validar
         run: node --max-old-space-size=4096 fde/extrair-v2.mjs fde-2022-04.pdf
 
+      - name: Diagnosticar regra de centavos e BDI
+        run: python3 fde/diagnosticar-centavos.py fde/2022-04
+
       - name: Analisar identificabilidade do sistema
         run: python3 fde/analisar-sistema.py fde/2022-04
 
@@ -65,5 +69,5 @@ jobs:
             echo 'Nenhuma alteração gerada.'
             exit 0
           fi
-          git commit -m 'FDE abril 2022: dados extraídos e solução global testada'
+          git commit -m 'FDE abril 2022: dados extraídos e diagnósticos atualizados'
           git push
