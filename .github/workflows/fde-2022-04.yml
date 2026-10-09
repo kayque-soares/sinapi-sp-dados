@@ -6,6 +6,7 @@ on:
       - feat/fde-2022-04
     paths:
       - fde/extrair-v2.mjs
+      - fde/debug-layout.mjs
       - .github/workflows/fde-2022-04.yml
   workflow_dispatch: {}
 
@@ -35,6 +36,9 @@ jobs:
             curl -fL --retry 3 --retry-delay 2 -A 'Mozilla/5.0' "$URL_CAIUA" -o fde-2022-04.pdf
           fi
           test -s fde-2022-04.pdf
+
+      - name: Diagnosticar linhas críticas do layout
+        run: node fde/debug-layout.mjs fde-2022-04.pdf
 
       - name: Extrair, reconstruir preços determináveis e validar
         run: node --max-old-space-size=4096 fde/extrair-v2.mjs fde-2022-04.pdf
