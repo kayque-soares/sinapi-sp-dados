@@ -5,7 +5,7 @@ on:
     branches:
       - feat/fde-2022-04
     paths:
-      - fde/extrair.mjs
+      - fde/extrair-v2.mjs
       - .github/workflows/fde-2022-04.yml
   workflow_dispatch: {}
 
@@ -37,7 +37,7 @@ jobs:
           test -s fde-2022-04.pdf
 
       - name: Extrair, reconstruir preços determináveis e validar
-        run: node --max-old-space-size=4096 fde/extrair.mjs fde-2022-04.pdf
+        run: node --max-old-space-size=4096 fde/extrair-v2.mjs fde-2022-04.pdf
 
       - name: Publicar resultado na branch
         shell: bash
