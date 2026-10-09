@@ -7,6 +7,7 @@ on:
     paths:
       - fde/extrair-v2.mjs
       - fde/reconstruir-precos.py
+      - fde/resolver-lp.py
       - fde/analisar-sistema.py
       - fde/testar-solucao-global.py
       - fde/diagnosticar-centavos.py
@@ -28,8 +29,8 @@ jobs:
         with:
           node-version: 22
       - run: npm ci || npm install
-      - name: Preparar álgebra linear
-        run: python3 -m pip install --quiet numpy
+      - name: Preparar otimização numérica
+        run: python3 -m pip install --quiet numpy scipy
 
       - name: Baixar cópia pública integral da FDE abril/2022
         shell: bash
@@ -56,10 +57,13 @@ jobs:
       - name: Reconstruir preços equivalentes sem BDI
         run: python3 fde/reconstruir-precos.py fde/2022-04
 
-      - name: Analisar identificabilidade do sistema
+      - name: Garantir viabilidade global e resolver componentes identificáveis
+        run: python3 fde/resolver-lp.py fde/2022-04
+
+      - name: Analisar remanescentes
         run: python3 fde/analisar-sistema.py fde/2022-04
 
-      - name: Testar solução global e rank numérico
+      - name: Testar rank dos remanescentes
         run: python3 fde/testar-solucao-global.py fde/2022-04
 
       - name: Publicar resultado na branch
@@ -73,5 +77,5 @@ jobs:
             echo 'Nenhuma alteração gerada.'
             exit 0
           fi
-          git commit -m 'FDE abril 2022: modelo sem BDI reconstruído e validado'
+          git commit -m 'FDE abril 2022: preços validados por LP global'
           git push
