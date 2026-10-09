@@ -37,6 +37,11 @@ jobs:
           fi
           test -s fde-2022-04.pdf
 
+      - name: Ajustar tolerância vertical confirmada pelo layout
+        shell: bash
+        run: |
+          sed -i 's/tolerancia = 3.5/tolerancia = 9.0/' fde/extrair-v2.mjs
+
       - name: Diagnosticar linhas críticas do layout
         run: node fde/debug-layout.mjs fde-2022-04.pdf
 
@@ -49,7 +54,7 @@ jobs:
           rm -f fde-2022-04.pdf
           git config user.name 'fde-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add fde/2022-04 fde/index.json
+          git add fde/extrair-v2.mjs fde/2022-04 fde/index.json
           if git diff --cached --quiet; then
             echo 'Nenhuma alteração gerada.'
             exit 0
