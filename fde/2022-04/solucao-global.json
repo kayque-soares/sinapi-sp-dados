@@ -28,14 +28,14 @@
       ],
       "rank": 920,
       "rank_completo": false,
-      "condicao": 4.948127870158061e+18,
-      "preco_min": -1740.6046714057143,
-      "preco_max": 33489.80691520318,
+      "condicao": 4.892841676745584e+18,
+      "preco_min": -1740.6060558156253,
+      "preco_max": 33489.806910569314,
       "precos_negativos": 120,
-      "residuo_max_abs": 0.006036296762260918,
-      "residuo_p95_abs": 0.00394102622930621,
-      "residuo_mediano_abs": 6.106031236186027e-10,
-      "residuo_rms": 0.0015781788100442588,
+      "residuo_max_abs": 0.006056558852517213,
+      "residuo_p95_abs": 0.003935701429196746,
+      "residuo_mediano_abs": 4.084208526933253e-10,
+      "residuo_rms": 0.0015775191568036199,
       "equacoes_ate_0_005": 1447,
       "equacoes_ate_0_01": 1458,
       "equacoes_ate_0_02": 1458
@@ -87,14 +87,14 @@
       ],
       "rank": 9,
       "rank_completo": false,
-      "condicao": 2.2966830056647803e+18,
-      "preco_min": 0.14660544319089822,
-      "preco_max": 197.59981838776974,
+      "condicao": 2.1640844380358848e+18,
+      "preco_min": 0.14660544343955992,
+      "preco_max": 197.59981872284123,
       "precos_negativos": 0,
-      "residuo_max_abs": 0.004065253028457505,
-      "residuo_p95_abs": 0.004065253028448979,
-      "residuo_mediano_abs": 0.004064833678867785,
-      "residuo_rms": 0.0031888996855857165,
+      "residuo_max_abs": 0.004065040600494285,
+      "residuo_p95_abs": 0.0040650406004473895,
+      "residuo_mediano_abs": 0.004065040600309544,
+      "residuo_rms": 0.0031888802069029976,
       "equacoes_ate_0_005": 13,
       "equacoes_ate_0_01": 13,
       "equacoes_ate_0_02": 13
@@ -137,19 +137,6 @@
     },
     {
       "variaveis": 4,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "1.01.49",
-        "1.01.91",
-        "3.55.06",
-        "3.90.76"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 4,
       "equacoes": 2,
       "codigos_amostra": [
         "4.63.05",
@@ -162,12 +149,25 @@
       "motivo": "menos_equacoes_que_variaveis"
     },
     {
+      "variaveis": 4,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "1.01.49",
+        "1.01.91",
+        "3.55.06",
+        "3.90.76"
+      ],
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
+    },
+    {
       "variaveis": 3,
       "equacoes": 2,
       "codigos_amostra": [
-        "4.80.03",
-        "4.80.63",
-        "4.80.67"
+        "2.12.13",
+        "2.12.17",
+        "2.12.18"
       ],
       "rank": null,
       "rank_completo": false,
@@ -189,6 +189,18 @@
       "variaveis": 3,
       "equacoes": 1,
       "codigos_amostra": [
+        "1.01.52",
+        "2.03.55",
+        "8.81.16"
+      ],
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
+    },
+    {
+      "variaveis": 3,
+      "equacoes": 1,
+      "codigos_amostra": [
         "3.15.16",
         "3.17.55",
         "3.17.56"
@@ -201,21 +213,9 @@
       "variaveis": 3,
       "equacoes": 2,
       "codigos_amostra": [
-        "3.15.98",
-        "3.17.18",
-        "3.17.47"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 3,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "1.01.52",
-        "2.03.55",
-        "8.81.16"
+        "4.80.03",
+        "4.80.63",
+        "4.80.67"
       ],
       "rank": null,
       "rank_completo": false,
@@ -225,9 +225,9 @@
       "variaveis": 3,
       "equacoes": 2,
       "codigos_amostra": [
-        "2.12.13",
-        "2.12.17",
-        "2.12.18"
+        "3.15.98",
+        "3.17.18",
+        "3.17.47"
       ],
       "rank": null,
       "rank_completo": false,
@@ -258,65 +258,21 @@
     },
     {
       "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.60.92",
-        "4.97.22"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "2.75.16",
-        "2.75.21"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.10.05",
-        "6.26.80"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "9.00.05",
-        "9.10.04"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
       "equacoes": 2,
       "codigos_amostra": [
-        "2.80.73",
-        "3.55.42"
+        "4.61.83",
+        "4.61.84"
       ],
-      "rank": 2,
-      "rank_completo": true,
-      "condicao": 6.249067021269515,
-      "preco_min": 48.56147855284551,
-      "preco_max": 57.45680861656691,
+      "rank": 1,
+      "rank_completo": false,
+      "condicao": null,
+      "preco_min": 21.809125149468006,
+      "preco_max": 43.61825029893601,
       "precos_negativos": 0,
-      "residuo_max_abs": 1.4210854715202004e-14,
-      "residuo_p95_abs": 1.3766765505351941e-14,
-      "residuo_mediano_abs": 9.769962616701378e-15,
-      "residuo_rms": 1.0731900677991188e-14,
+      "residuo_max_abs": 2.8421709430404007e-13,
+      "residuo_p95_abs": 2.8350655156827996e-13,
+      "residuo_mediano_abs": 2.7711166694643907e-13,
+      "residuo_rms": 2.772027472009762e-13,
       "equacoes_ate_0_005": 2,
       "equacoes_ate_0_01": 2,
       "equacoes_ate_0_02": 2
@@ -325,19 +281,8 @@
       "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "2.68.55",
-        "3.16.05"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.60.50",
-        "3.60.51"
+        "4.60.91",
+        "4.97.21"
       ],
       "rank": null,
       "rank_completo": false,
@@ -358,115 +303,6 @@
       "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "6.10.06",
-        "6.26.81"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 2,
-      "codigos_amostra": [
-        "6.75.02",
-        "6.75.52"
-      ],
-      "rank": 1,
-      "rank_completo": false,
-      "condicao": 5.961777047638983e+16,
-      "preco_min": 46.046435043089396,
-      "preco_max": 46.0464350430894,
-      "precos_negativos": 0,
-      "residuo_max_abs": 5.684341886080802e-14,
-      "residuo_p95_abs": 5.684341886080802e-14,
-      "residuo_mediano_abs": 5.684341886080802e-14,
-      "residuo_rms": 5.684341886080802e-14,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.60.25",
-        "4.60.27"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.25.30",
-        "6.26.70"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.02.15",
-        "8.01.14"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.60.91",
-        "4.97.21"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.75.09",
-        "6.60.14"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.56.25",
-        "4.75.07"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "8.80.70",
-        "9.00.01"
-      ],
-      "rank": null,
-      "rank_completo": false,
-      "motivo": "menos_equacoes_que_variaveis"
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "codigos_amostra": [
         "4.80.65",
         "4.80.66"
       ],
@@ -478,8 +314,8 @@
       "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "1.01.23",
-        "2.05.80"
+        "3.67.10",
+        "3.67.11"
       ],
       "rank": null,
       "rank_completo": false,
@@ -489,8 +325,8 @@
       "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "3.80.46",
-        "9.10.65"
+        "6.10.05",
+        "6.26.80"
       ],
       "rank": null,
       "rank_completo": false,
@@ -500,8 +336,19 @@
       "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "2.35.35",
-        "3.16.71"
+        "4.60.92",
+        "4.97.22"
+      ],
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.10.06",
+        "6.26.81"
       ],
       "rank": null,
       "rank_completo": false,
@@ -522,8 +369,8 @@
       "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "4.61.72",
-        "4.97.56"
+        "3.60.50",
+        "3.60.51"
       ],
       "rank": null,
       "rank_completo": false,
@@ -533,8 +380,8 @@
       "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "3.67.10",
-        "3.67.11"
+        "6.02.15",
+        "8.01.14"
       ],
       "rank": null,
       "rank_completo": false,
@@ -542,24 +389,58 @@
     },
     {
       "variaveis": 2,
-      "equacoes": 2,
+      "equacoes": 1,
       "codigos_amostra": [
-        "4.61.83",
-        "4.61.84"
+        "8.80.70",
+        "9.00.01"
       ],
-      "rank": 1,
+      "rank": null,
       "rank_completo": false,
-      "condicao": 7.452221309548726e+16,
-      "preco_min": 21.809125065447148,
-      "preco_max": 43.61825013089429,
-      "precos_negativos": 0,
-      "residuo_max_abs": 2.5406507120351307e-07,
-      "residuo_p95_abs": 2.540650697824276e-07,
-      "residuo_mediano_abs": 2.5406505699265836e-07,
-      "residuo_rms": 2.540650569926588e-07,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
+      "motivo": "menos_equacoes_que_variaveis"
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "2.35.35",
+        "3.16.71"
+      ],
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "2.75.16",
+        "2.75.21"
+      ],
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "1.01.23",
+        "2.05.80"
+      ],
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "2.68.55",
+        "3.16.05"
+      ],
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
     },
     {
       "variaveis": 2,
@@ -573,404 +454,123 @@
       "motivo": "menos_equacoes_que_variaveis"
     },
     {
-      "variaveis": 1,
+      "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "9.10.25"
+        "4.60.25",
+        "4.60.27"
       ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 73.932828699187,
-      "preco_max": 73.932828699187,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
     },
     {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.15.88"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 81.16856463414635,
-      "preco_max": 81.16856463414635,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.94.84"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 37.03730125528456,
-      "preco_max": 37.03730125528456,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.41.20"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 240.17540352032526,
-      "preco_max": 240.17540352032526,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
+      "variaveis": 2,
       "equacoes": 2,
       "codigos_amostra": [
-        "4.56.55"
+        "2.80.73",
+        "3.55.42"
       ],
-      "rank": 1,
+      "rank": 2,
       "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 44.07417007560975,
-      "preco_max": 44.07417007560975,
+      "condicao": 6.249067021269516,
+      "preco_min": 48.5614789208506,
+      "preco_max": 57.45680948552166,
       "precos_negativos": 0,
-      "residuo_max_abs": 0.0013986097561158317,
-      "residuo_p95_abs": 0.0013986097561144105,
-      "residuo_mediano_abs": 0.0013986097561016209,
-      "residuo_rms": 0.0013986097561016209,
+      "residuo_max_abs": 1.4210854715202004e-14,
+      "residuo_p95_abs": 1.3500311979441903e-14,
+      "residuo_mediano_abs": 7.105427357601002e-15,
+      "residuo_rms": 1.0048591735576161e-14,
       "equacoes_ate_0_005": 2,
       "equacoes_ate_0_01": 2,
       "equacoes_ate_0_02": 2
     },
     {
-      "variaveis": 1,
-      "equacoes": 1,
+      "variaveis": 2,
+      "equacoes": 2,
       "codigos_amostra": [
-        "9.10.06"
+        "6.75.02",
+        "6.75.52"
       ],
       "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 8.172969817073188,
-      "preco_max": 8.172969817073188,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.13.03"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 3743.960984291057,
-      "preco_max": 3743.960984291057,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.60.89"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 207.94580566504078,
-      "preco_max": 207.94580566504078,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "2.75.29"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 106.57266802699186,
-      "preco_max": 106.57266802699186,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.65.62"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 2830.42508246748,
-      "preco_max": 2830.42508246748,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "2.35.34"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 663.6827538488151,
-      "preco_max": 663.6827538488151,
+      "rank_completo": false,
+      "condicao": null,
+      "preco_min": 46.04643527204472,
+      "preco_max": 46.04643527204472,
       "precos_negativos": 0,
       "residuo_max_abs": 2.842170943040401e-14,
       "residuo_p95_abs": 2.842170943040401e-14,
       "residuo_mediano_abs": 2.842170943040401e-14,
       "residuo_rms": 2.842170943040401e-14,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
     },
     {
-      "variaveis": 1,
+      "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "3.70.78"
+        "4.61.72",
+        "4.97.56"
       ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 209.93089401626014,
-      "preco_max": 209.93089401626014,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
     },
     {
-      "variaveis": 1,
+      "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "3.12.07"
+        "4.56.25",
+        "4.75.07"
       ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 5649.3137950975615,
-      "preco_max": 5649.3137950975615,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
     },
     {
-      "variaveis": 1,
+      "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "4.61.51"
+        "9.00.05",
+        "9.10.04"
       ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 143.7103903593496,
-      "preco_max": 143.7103903593496,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
     },
     {
-      "variaveis": 1,
-      "equacoes": 3,
-      "codigos_amostra": [
-        "4.56.62"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 14.788975866124654,
-      "preco_max": 14.788975866124654,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.004204385907856434,
-      "residuo_p95_abs": 0.004129841165306658,
-      "residuo_mediano_abs": 0.0034589384823586755,
-      "residuo_rms": 0.0031726334041359597,
-      "equacoes_ate_0_005": 3,
-      "equacoes_ate_0_01": 3,
-      "equacoes_ate_0_02": 3
-    },
-    {
-      "variaveis": 1,
+      "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "4.60.51"
+        "3.80.46",
+        "9.10.65"
       ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 104.3504884422764,
-      "preco_max": 104.3504884422764,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
     },
     {
-      "variaveis": 1,
-      "equacoes": 3,
-      "codigos_amostra": [
-        "4.56.13"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 511.59429354661245,
-      "preco_max": 511.59429354661245,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0038021441735054395,
-      "residuo_p95_abs": 0.003751897940423987,
-      "residuo_mediano_abs": 0.003299681842690916,
-      "residuo_rms": 0.0029209969173077735,
-      "equacoes_ate_0_005": 3,
-      "equacoes_ate_0_01": 3,
-      "equacoes_ate_0_02": 3
-    },
-    {
-      "variaveis": 1,
+      "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "6.65.78"
+        "4.75.09",
+        "6.60.14"
       ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 41.95321061513641,
-      "preco_max": 41.95321061513641,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
     },
     {
-      "variaveis": 1,
+      "variaveis": 2,
       "equacoes": 1,
       "codigos_amostra": [
-        "6.81.12"
+        "6.25.30",
+        "6.26.70"
       ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 17.309176524196676,
-      "preco_max": 17.309176524196676,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.12.08"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 2192.8390330715456,
-      "preco_max": 2192.8390330715456,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
+      "rank": null,
+      "rank_completo": false,
+      "motivo": "menos_equacoes_que_variaveis"
     },
     {
       "variaveis": 1,
@@ -981,8 +581,8 @@
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 3452.0843059056906,
-      "preco_max": 3452.0843059056906,
+      "preco_min": 3452.0843078469725,
+      "preco_max": 3452.0843078469725,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -996,13 +596,13 @@
       "variaveis": 1,
       "equacoes": 1,
       "codigos_amostra": [
-        "4.61.40"
+        "3.11.12"
       ],
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 174.7198702219512,
-      "preco_max": 174.7198702219512,
+      "preco_min": 1018.9354326758807,
+      "preco_max": 1018.9354326758807,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -1016,553 +616,13 @@
       "variaveis": 1,
       "equacoes": 1,
       "codigos_amostra": [
-        "9.10.32"
+        "6.65.61"
       ],
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 14.00493342243902,
-      "preco_max": 14.00493342243902,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.65.63"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 3507.368171898375,
-      "preco_max": 3507.368171898375,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.11.09"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 4091.3759670650406,
-      "preco_max": 4091.3759670650406,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.61.41"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 128.42131731382113,
-      "preco_max": 128.42131731382113,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.60.90"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 487.286389699187,
-      "preco_max": 487.286389699187,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "codigos_amostra": [
-        "4.56.54"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 28.397984904878026,
-      "preco_max": 28.397984904878026,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0013986097561087263,
-      "residuo_p95_abs": 0.0013986097561076605,
-      "residuo_mediano_abs": 0.0013986097560980681,
-      "residuo_rms": 0.0013986097560980681,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.60.52"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 139.19601689756098,
-      "preco_max": 139.19601689756098,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.13.04"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 4061.385118913822,
-      "preco_max": 4061.385118913822,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.12.25"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 2868.4726763836193,
-      "preco_max": 2868.4726763836193,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "codigos_amostra": [
-        "4.45.93"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 305.2068596910567,
-      "preco_max": 305.2068596910567,
-      "precos_negativos": 0,
-      "residuo_max_abs": 1.1368683772161603e-13,
-      "residuo_p95_abs": 1.1368683772161603e-13,
-      "residuo_mediano_abs": 1.1368683772161603e-13,
-      "residuo_rms": 1.1368683772161603e-13,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.61.45"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 137.8359514601626,
-      "preco_max": 137.8359514601626,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "9.10.23"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 201.09483430398376,
-      "preco_max": 201.09483430398376,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.10.68"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 5481.290775248781,
-      "preco_max": 5481.290775248781,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 6,
-      "codigos_amostra": [
-        "3.50.91"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 559.2304110018042,
-      "preco_max": 559.2304110018042,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0011729589412681207,
-      "residuo_p95_abs": 0.0011321987201071693,
-      "residuo_mediano_abs": 0.0006290348079929231,
-      "residuo_rms": 0.0007590370114359098,
-      "equacoes_ate_0_005": 6,
-      "equacoes_ate_0_01": 6,
-      "equacoes_ate_0_02": 6
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.15.25"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 82.34742642276422,
-      "preco_max": 82.34742642276422,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.81.10"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 10.39934388648857,
-      "preco_max": 10.39934388648857,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "2.70.20"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 68.45002571138212,
-      "preco_max": 68.45002571138212,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.11.04"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 2776.5056997382117,
-      "preco_max": 2776.5056997382117,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.81.11"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 14.058647572899723,
-      "preco_max": 14.058647572899723,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.94.85"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 59.395586122764215,
-      "preco_max": 59.395586122764215,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "2.40.45"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 7.996156243902446,
-      "preco_max": 7.996156243902446,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.12.26"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 2799.189996962602,
-      "preco_max": 2799.189996962602,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "codigos_amostra": [
-        "4.45.95"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 343.75157513821114,
-      "preco_max": 343.75157513821114,
-      "precos_negativos": 0,
-      "residuo_max_abs": 1.1368683772161603e-13,
-      "residuo_p95_abs": 1.1368683772161603e-13,
-      "residuo_mediano_abs": 1.1368683772161603e-13,
-      "residuo_rms": 1.1368683772161603e-13,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "4.61.44"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 102.13297511626013,
-      "preco_max": 102.13297511626013,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.12.98"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 3209.7252119333343,
-      "preco_max": 3209.7252119333343,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.12.33"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 5462.706679680604,
-      "preco_max": 5462.706679680604,
-      "precos_negativos": 0,
-      "residuo_max_abs": 1.1368683772161603e-13,
-      "residuo_p95_abs": 1.1368683772161603e-13,
-      "residuo_mediano_abs": 1.1368683772161603e-13,
-      "residuo_rms": 1.1368683772161603e-13,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.81.13"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 40.81436646535039,
-      "preco_max": 40.81436646535039,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.65.64"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 6143.042968646341,
-      "preco_max": 6143.042968646341,
+      "preco_min": 3021.311263259035,
+      "preco_max": 3021.311263259035,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -1594,23 +654,43 @@
     },
     {
       "variaveis": 1,
-      "equacoes": 2,
+      "equacoes": 1,
       "codigos_amostra": [
-        "4.56.51"
+        "9.10.06"
       ],
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 13.39798490487803,
-      "preco_max": 13.39798490487803,
+      "preco_min": 8.172971760865675,
+      "preco_max": 8.172971760865675,
       "precos_negativos": 0,
-      "residuo_max_abs": 0.0013986097561051736,
-      "residuo_p95_abs": 0.001398609756104463,
-      "residuo_mediano_abs": 0.0013986097560980681,
-      "residuo_rms": 0.0013986097560980681,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "2.40.45"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 7.996156160888446,
+      "preco_max": 7.996156160888446,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
     },
     {
       "variaveis": 1,
@@ -1621,128 +701,8 @@
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 66.72572575609755,
-      "preco_max": 66.72572575609755,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "codigos_amostra": [
-        "3.13.53"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 3407.571232009266,
-      "preco_max": 3407.571232009266,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0008455807508198632,
-      "residuo_p95_abs": 0.0008278827456365433,
-      "residuo_mediano_abs": 0.0006686006989866655,
-      "residuo_rms": 0.0006916276696549517,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.81.20"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 5.2502923959736725,
-      "preco_max": 5.2502923959736725,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "codigos_amostra": [
-        "4.45.96"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 391.1987296097559,
-      "preco_max": 391.1987296097559,
-      "precos_negativos": 0,
-      "residuo_max_abs": 1.1368683772161603e-13,
-      "residuo_p95_abs": 1.1368683772161603e-13,
-      "residuo_mediano_abs": 1.1368683772161603e-13,
-      "residuo_rms": 1.1368683772161603e-13,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "codigos_amostra": [
-        "4.45.94"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 383.0523881463413,
-      "preco_max": 383.0523881463413,
-      "precos_negativos": 0,
-      "residuo_max_abs": 1.1368683772161603e-13,
-      "residuo_p95_abs": 1.1368683772161603e-13,
-      "residuo_mediano_abs": 1.1368683772161603e-13,
-      "residuo_rms": 1.1368683772161603e-13,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "codigos_amostra": [
-        "3.12.31"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 6761.673455706315,
-      "preco_max": 6761.673455706315,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0026515507465774135,
-      "residuo_p95_abs": 0.0025473050290429453,
-      "residuo_mediano_abs": 0.0016090935712327337,
-      "residuo_rms": 0.0019172634361010802,
-      "equacoes_ate_0_005": 2,
-      "equacoes_ate_0_01": 2,
-      "equacoes_ate_0_02": 2
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "3.15.46"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 1812.1180975609757,
-      "preco_max": 1812.1180975609757,
+      "preco_min": 66.72572382532155,
+      "preco_max": 66.72572382532155,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -1756,13 +716,13 @@
       "variaveis": 1,
       "equacoes": 1,
       "codigos_amostra": [
-        "6.65.61"
+        "3.12.26"
       ],
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 3021.3112613292687,
-      "preco_max": 3021.3112613292687,
+      "preco_min": 2799.1899989038834,
+      "preco_max": 2799.1899989038834,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -1781,8 +741,8 @@
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 2722.5802408650407,
-      "preco_max": 2722.5802408650407,
+      "preco_min": 2722.5802428063225,
+      "preco_max": 2722.5802428063225,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -1796,13 +756,13 @@
       "variaveis": 1,
       "equacoes": 1,
       "codigos_amostra": [
-        "3.11.06"
+        "9.10.23"
       ],
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 4334.386965829269,
-      "preco_max": 4334.386965829269,
+      "preco_min": 201.09483534831702,
+      "preco_max": 201.09483534831702,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -1816,33 +776,13 @@
       "variaveis": 1,
       "equacoes": 1,
       "codigos_amostra": [
-        "3.11.12"
+        "3.11.09"
       ],
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 1018.9354300180669,
-      "preco_max": 1018.9354300180669,
-      "precos_negativos": 0,
-      "residuo_max_abs": 2.842170943040401e-14,
-      "residuo_p95_abs": 2.842170943040401e-14,
-      "residuo_mediano_abs": 2.842170943040401e-14,
-      "residuo_rms": 2.842170943040401e-14,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "6.65.60"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 2577.994188158537,
-      "preco_max": 2577.994188158537,
+      "preco_min": 4091.3759700790433,
+      "preco_max": 4091.3759700790433,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -1856,33 +796,13 @@
       "variaveis": 1,
       "equacoes": 1,
       "codigos_amostra": [
-        "4.61.69"
+        "6.65.78"
       ],
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 144.91499217317067,
-      "preco_max": 144.91499217317067,
-      "precos_negativos": 0,
-      "residuo_max_abs": 0.0,
-      "residuo_p95_abs": 0.0,
-      "residuo_mediano_abs": 0.0,
-      "residuo_rms": 0.0,
-      "equacoes_ate_0_005": 1,
-      "equacoes_ate_0_01": 1,
-      "equacoes_ate_0_02": 1
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 1,
-      "codigos_amostra": [
-        "9.10.03"
-      ],
-      "rank": 1,
-      "rank_completo": true,
-      "condicao": 1.0,
-      "preco_min": 4.814454990894312,
-      "preco_max": 4.814454990894312,
+      "preco_min": 41.95321061513641,
+      "preco_max": 41.95321061513641,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -1901,8 +821,1088 @@
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 8.900349578784365,
-      "preco_max": 8.900349578784365,
+      "preco_min": 8.9003496853875,
+      "preco_max": 8.9003496853875,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.60.51"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 104.35048814103085,
+      "preco_max": 104.35048814103085,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.12.98"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 3209.725213764214,
+      "preco_max": 3209.725213764214,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.81.13"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 40.814366585277135,
+      "preco_max": 40.814366585277135,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.11.04"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 2776.505701569092,
+      "preco_max": 2776.505701569092,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.12.08"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 2192.8390349024253,
+      "preco_max": 2192.8390349024253,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.12.07"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 5649.313798869295,
+      "preco_max": 5649.313798869295,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "2.75.29"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 106.57266648676965,
+      "preco_max": 106.57266648676965,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.94.84"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 37.03730160964795,
+      "preco_max": 37.03730160964795,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.65.62"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 2830.4250843972463,
+      "preco_max": 2830.4250843972463,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "codigos_amostra": [
+        "4.45.96"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 391.19872872989185,
+      "preco_max": 391.19872872989185,
+      "precos_negativos": 0,
+      "residuo_max_abs": 1.1368683772161603e-13,
+      "residuo_p95_abs": 1.1368683772161603e-13,
+      "residuo_mediano_abs": 1.1368683772161603e-13,
+      "residuo_rms": 1.1368683772161603e-13,
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.65.64"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 6143.042970576107,
+      "preco_max": 6143.042970576107,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.15.46"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 1812.1180957515637,
+      "preco_max": 1812.1180957515637,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.61.41"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 128.42131646809977,
+      "preco_max": 128.42131646809977,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.81.10"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 10.399343973580551,
+      "preco_max": 10.399343973580551,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.12.33"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 5462.706681126338,
+      "preco_max": 5462.706681126338,
+      "precos_negativos": 0,
+      "residuo_max_abs": 1.1368683772161603e-13,
+      "residuo_p95_abs": 1.1368683772161603e-13,
+      "residuo_mediano_abs": 1.1368683772161603e-13,
+      "residuo_rms": 1.1368683772161603e-13,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "codigos_amostra": [
+        "4.45.93"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 305.2068588111928,
+      "preco_max": 305.2068588111928,
+      "precos_negativos": 0,
+      "residuo_max_abs": 1.1368683772161603e-13,
+      "residuo_p95_abs": 1.1368683772161603e-13,
+      "residuo_mediano_abs": 1.1368683772161603e-13,
+      "residuo_rms": 1.1368683772161603e-13,
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.60.52"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 139.19601659631536,
+      "preco_max": 139.19601659631536,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "codigos_amostra": [
+        "3.13.53"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 3407.5712338299186,
+      "preco_max": 3407.5712338299186,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0008455631596007152,
+      "residuo_p95_abs": 0.0008278655226149567,
+      "residuo_mediano_abs": 0.0006685867897431308,
+      "residuo_rms": 0.0006916132813263448,
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "9.10.03"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 4.814454936105072,
+      "preco_max": 4.814454936105072,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.10.68"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 5481.290779130915,
+      "preco_max": 5481.290779130915,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.61.45"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 137.8359506144412,
+      "preco_max": 137.8359506144412,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.70.78"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 209.93089401626014,
+      "preco_max": 209.93089401626014,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "2.70.20"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 68.45003083028209,
+      "preco_max": 68.45003083028209,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.13.04"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 4061.3851208551023,
+      "preco_max": 4061.3851208551023,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "codigos_amostra": [
+        "3.12.31"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 6761.673459647898,
+      "preco_max": 6761.673459647898,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0026518289457726496,
+      "residuo_p95_abs": 0.0025475722907344787,
+      "residuo_mediano_abs": 0.0016092623953909424,
+      "residuo_rms": 0.001917464593987124,
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.65.60"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 2577.994190088303,
+      "preco_max": 2577.994190088303,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "codigos_amostra": [
+        "4.45.94"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 383.05238726647735,
+      "preco_max": 383.05238726647735,
+      "precos_negativos": 0,
+      "residuo_max_abs": 1.1368683772161603e-13,
+      "residuo_p95_abs": 1.1368683772161603e-13,
+      "residuo_mediano_abs": 1.1368683772161603e-13,
+      "residuo_rms": 1.1368683772161603e-13,
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.60.89"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 207.94580467635961,
+      "preco_max": 207.94580467635961,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.60.90"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 487.2863891009881,
+      "preco_max": 487.2863891009881,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 6,
+      "codigos_amostra": [
+        "3.50.91"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 559.2304150838687,
+      "preco_max": 559.2304150838687,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0011728189542878908,
+      "residuo_p95_abs": 0.0011320838488551033,
+      "residuo_mediano_abs": 0.0006291004008787127,
+      "residuo_rms": 0.0007590104741374512,
+      "equacoes_ate_0_005": 6,
+      "equacoes_ate_0_01": 6,
+      "equacoes_ate_0_02": 6
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "codigos_amostra": [
+        "4.56.54"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 28.39798803246682,
+      "preco_max": 28.39798803246682,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.001399279819612076,
+      "residuo_p95_abs": 0.0013992798196106548,
+      "residuo_mediano_abs": 0.001399279819597865,
+      "residuo_rms": 0.001399279819597865,
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "codigos_amostra": [
+        "4.56.55"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 44.07417653744654,
+      "preco_max": 44.07417653744654,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0013992798196014178,
+      "residuo_p95_abs": 0.0013992798195999966,
+      "residuo_mediano_abs": 0.001399279819587207,
+      "residuo_rms": 0.001399279819587207,
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 3,
+      "codigos_amostra": [
+        "4.56.62"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 14.788977157424679,
+      "preco_max": 14.788977157424679,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.004210009540816628,
+      "residuo_p95_abs": 0.004135187299264232,
+      "residuo_mediano_abs": 0.003461787125292659,
+      "residuo_rms": 0.0031763704243316718,
+      "equacoes_ate_0_005": 3,
+      "equacoes_ate_0_01": 3,
+      "equacoes_ate_0_02": 3
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "9.10.32"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 14.004933819884414,
+      "preco_max": 14.004933819884414,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.65.63"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 3507.368173828141,
+      "preco_max": 3507.368173828141,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.41.20"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 240.17540374563418,
+      "preco_max": 240.17540374563418,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.61.40"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 174.7198693808585,
+      "preco_max": 174.7198693808585,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "codigos_amostra": [
+        "4.56.51"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 13.397988032466829,
+      "preco_max": 13.397988032466829,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0013992798196031941,
+      "residuo_p95_abs": 0.0013992798196026611,
+      "residuo_mediano_abs": 0.001399279819597865,
+      "residuo_rms": 0.001399279819597865,
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.94.85"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 59.39558529208331,
+      "preco_max": 59.39558529208331,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 3,
+      "codigos_amostra": [
+        "4.56.13"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 511.5942945322167,
+      "preco_max": 511.5942945322167,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.003802057486666399,
+      "residuo_p95_abs": 0.003751882594281142,
+      "residuo_mediano_abs": 0.003300308562813825,
+      "residuo_rms": 0.002921154436412333,
+      "equacoes_ate_0_005": 3,
+      "equacoes_ate_0_01": 3,
+      "equacoes_ate_0_02": 3
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.81.20"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 5.250292483065653,
+      "preco_max": 5.250292483065653,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.15.25"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 82.34742583470532,
+      "preco_max": 82.34742583470532,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.81.11"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 14.05864767002922,
+      "preco_max": 14.05864767002922,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.13.03"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 3743.960986121937,
+      "preco_max": 3743.960986121937,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.15.88"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 81.16856404608745,
+      "preco_max": 81.16856404608745,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "9.10.25"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 73.932824233955,
+      "preco_max": 73.932824233955,
+      "precos_negativos": 0,
+      "residuo_max_abs": 4.440892098500626e-16,
+      "residuo_p95_abs": 4.440892098500626e-16,
+      "residuo_mediano_abs": 4.440892098500626e-16,
+      "residuo_rms": 4.440892098500626e-16,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "2.35.34"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 663.6827538488151,
+      "preco_max": 663.6827538488151,
+      "precos_negativos": 0,
+      "residuo_max_abs": 2.842170943040401e-14,
+      "residuo_p95_abs": 2.842170943040401e-14,
+      "residuo_mediano_abs": 2.842170943040401e-14,
+      "residuo_rms": 2.842170943040401e-14,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.12.25"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 2868.4726775421536,
+      "preco_max": 2868.4726775421536,
+      "precos_negativos": 0,
+      "residuo_max_abs": 1.1368683772161603e-13,
+      "residuo_p95_abs": 1.1368683772161603e-13,
+      "residuo_mediano_abs": 1.1368683772161603e-13,
+      "residuo_rms": 1.1368683772161603e-13,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.61.51"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 143.7103895043708,
+      "preco_max": 143.7103895043708,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "codigos_amostra": [
+        "4.45.95"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 343.7515742583472,
+      "preco_max": 343.7515742583472,
+      "precos_negativos": 0,
+      "residuo_max_abs": 1.1368683772161603e-13,
+      "residuo_p95_abs": 1.1368683772161603e-13,
+      "residuo_mediano_abs": 1.1368683772161603e-13,
+      "residuo_rms": 1.1368683772161603e-13,
+      "equacoes_ate_0_005": 2,
+      "equacoes_ate_0_01": 2,
+      "equacoes_ate_0_02": 2
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.61.69"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 144.91499133207802,
+      "preco_max": 144.91499133207802,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "3.11.06"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 4334.386969601002,
+      "preco_max": 4334.386969601002,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "6.81.12"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 17.309176630799808,
+      "preco_max": 17.309176630799808,
+      "precos_negativos": 0,
+      "residuo_max_abs": 0.0,
+      "residuo_p95_abs": 0.0,
+      "residuo_mediano_abs": 0.0,
+      "residuo_rms": 0.0,
+      "equacoes_ate_0_005": 1,
+      "equacoes_ate_0_01": 1,
+      "equacoes_ate_0_02": 1
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 1,
+      "codigos_amostra": [
+        "4.61.44"
+      ],
+      "rank": 1,
+      "rank_completo": true,
+      "condicao": 1.0,
+      "preco_min": 102.13297513914547,
+      "preco_max": 102.13297513914547,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,

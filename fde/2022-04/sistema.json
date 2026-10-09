@@ -215,26 +215,6 @@
       "equacoes": 2,
       "superdeterminado_estrutural": false,
       "codigos": [
-        "4.80.03",
-        "4.80.63",
-        "4.80.67"
-      ]
-    },
-    {
-      "variaveis": 3,
-      "equacoes": 2,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "3.13.02",
-        "3.15.45",
-        "3.87.40"
-      ]
-    },
-    {
-      "variaveis": 3,
-      "equacoes": 2,
-      "superdeterminado_estrutural": false,
-      "codigos": [
         "3.15.98",
         "3.17.18",
         "3.17.47"
@@ -252,12 +232,22 @@
     },
     {
       "variaveis": 3,
-      "equacoes": 1,
+      "equacoes": 2,
       "superdeterminado_estrutural": false,
       "codigos": [
-        "1.01.52",
-        "2.03.55",
-        "8.81.16"
+        "4.80.03",
+        "4.80.63",
+        "4.80.67"
+      ]
+    },
+    {
+      "variaveis": 3,
+      "equacoes": 2,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "3.13.02",
+        "3.15.45",
+        "3.87.40"
       ]
     },
     {
@@ -268,6 +258,25 @@
         "3.15.16",
         "3.17.55",
         "3.17.56"
+      ]
+    },
+    {
+      "variaveis": 3,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "1.01.52",
+        "2.03.55",
+        "8.81.16"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 2,
+      "superdeterminado_estrutural": true,
+      "codigos": [
+        "6.75.02",
+        "6.75.52"
       ]
     },
     {
@@ -290,11 +299,83 @@
     },
     {
       "variaveis": 2,
-      "equacoes": 2,
-      "superdeterminado_estrutural": true,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
       "codigos": [
-        "6.75.02",
-        "6.75.52"
+        "2.68.55",
+        "3.16.05"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "3.80.46",
+        "9.10.65"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "4.60.25",
+        "4.60.27"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "2.75.16",
+        "2.75.21"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "3.67.10",
+        "3.67.11"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "9.00.05",
+        "9.10.04"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "6.25.30",
+        "6.26.70"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "4.60.91",
+        "4.97.21"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "6.10.06",
+        "6.26.81"
       ]
     },
     {
@@ -320,125 +401,8 @@
       "equacoes": 1,
       "superdeterminado_estrutural": false,
       "codigos": [
-        "2.35.35",
-        "3.16.71"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "4.60.92",
-        "4.97.22"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "1.01.23",
-        "2.05.80"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "3.67.10",
-        "3.67.11"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "2.75.16",
-        "2.75.21"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "6.75.20",
-        "6.75.26"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "9.00.05",
-        "9.10.04"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "4.80.65",
-        "4.80.66"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "6.10.06",
-        "6.26.81"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "6.25.30",
-        "6.26.70"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "3.80.46",
-        "9.10.65"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "4.56.25",
-        "4.75.07"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "4.60.91",
-        "4.97.21"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "4.75.09",
-        "6.60.14"
+        "4.61.72",
+        "4.97.56"
       ]
     },
     {
@@ -464,35 +428,26 @@
       "equacoes": 1,
       "superdeterminado_estrutural": false,
       "codigos": [
+        "4.56.25",
+        "4.75.07"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "6.75.20",
+        "6.75.26"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
         "3.60.50",
         "3.60.51"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "4.60.25",
-        "4.60.27"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "2.68.55",
-        "3.16.05"
-      ]
-    },
-    {
-      "variaveis": 2,
-      "equacoes": 1,
-      "superdeterminado_estrutural": false,
-      "codigos": [
-        "4.61.72",
-        "4.97.56"
       ]
     },
     {
@@ -509,8 +464,53 @@
       "equacoes": 1,
       "superdeterminado_estrutural": false,
       "codigos": [
+        "2.35.35",
+        "3.16.71"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
         "8.01.50",
         "8.80.08"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "4.60.92",
+        "4.97.22"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "4.75.09",
+        "6.60.14"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "4.80.65",
+        "4.80.66"
+      ]
+    },
+    {
+      "variaveis": 2,
+      "equacoes": 1,
+      "superdeterminado_estrutural": false,
+      "codigos": [
+        "1.01.23",
+        "2.05.80"
       ]
     },
     {
@@ -526,7 +526,7 @@
       "equacoes": 3,
       "superdeterminado_estrutural": true,
       "codigos": [
-        "4.56.62"
+        "4.56.13"
       ]
     },
     {
@@ -534,31 +534,7 @@
       "equacoes": 3,
       "superdeterminado_estrutural": true,
       "codigos": [
-        "4.56.13"
-      ]
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "superdeterminado_estrutural": true,
-      "codigos": [
-        "4.56.55"
-      ]
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "superdeterminado_estrutural": true,
-      "codigos": [
-        "4.45.95"
-      ]
-    },
-    {
-      "variaveis": 1,
-      "equacoes": 2,
-      "superdeterminado_estrutural": true,
-      "codigos": [
-        "4.45.96"
+        "4.56.62"
       ]
     },
     {
@@ -574,6 +550,22 @@
       "equacoes": 2,
       "superdeterminado_estrutural": true,
       "codigos": [
+        "4.45.96"
+      ]
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "superdeterminado_estrutural": true,
+      "codigos": [
+        "4.45.95"
+      ]
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "superdeterminado_estrutural": true,
+      "codigos": [
         "4.45.93"
       ]
     },
@@ -582,7 +574,15 @@
       "equacoes": 2,
       "superdeterminado_estrutural": true,
       "codigos": [
-        "4.56.51"
+        "4.45.94"
+      ]
+    },
+    {
+      "variaveis": 1,
+      "equacoes": 2,
+      "superdeterminado_estrutural": true,
+      "codigos": [
+        "3.13.53"
       ]
     }
   ]
