@@ -1,0 +1,82 @@
+name: Extrair FDE abril 2022
+
+on:
+  push:
+    branches:
+      - feat/fde-2022-04
+    paths:
+      - fde/extrair-v2.mjs
+      - fde/reconstruir-precos.py
+      - fde/resolver-lp.py
+      - fde/analisar-sistema.py
+      - fde/testar-solucao-global.py
+      - fde/diagnosticar-centavos.py
+      - .github/workflows/fde-2022-04.yml
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency: extrair-fde-2022-04
+
+jobs:
+  extrair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci || npm install
+      - name: Preparar otimização numérica
+        run: python3 -m pip install --quiet numpy scipy
+
+      - name: Baixar cópia pública integral da FDE abril/2022
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL_REGISTRO='https://registro.sp.gov.br/publicacoes/docs/445_Anexo%20I%20-%20Termo%20de%20Refer%C3%AAncia%20-%20Tabela-FDE-Abril-2022.pdf'
+          URL_CAIUA='https://mail.caiua.sp.gov.br/clientes/download/4037'
+          if ! curl -fL --retry 3 --retry-delay 2 -A 'Mozilla/5.0' "$URL_REGISTRO" -o fde-2022-04.pdf; then
+            curl -fL --retry 3 --retry-delay 2 -A 'Mozilla/5.0' "$URL_CAIUA" -o fde-2022-04.pdf
+          fi
+          test -s fde-2022-04.pdf
+
+      - name: Ajustar parser e liberar análise LP integral
+        shell: bash
+        run: |
+          sed -i 's/tolerancia = 3.5/tolerancia = 9.0/' fde/extrair-v2.mjs
+          sed -i 's/MAX_COMPONENTE_PARA_INTERVALOS = 60/MAX_COMPONENTE_PARA_INTERVALOS = 2000/' fde/resolver-lp.py
+
+      - name: Extrair estrutura oficial do PDF
+        run: node --max-old-space-size=4096 fde/extrair-v2.mjs fde-2022-04.pdf
+
+      - name: Diagnosticar regra de centavos e BDI
+        run: python3 fde/diagnosticar-centavos.py fde/2022-04
+
+      - name: Reconstruir preços equivalentes sem BDI
+        run: python3 fde/reconstruir-precos.py fde/2022-04
+
+      - name: Resolver todos os intervalos de preço por LP global
+        run: python3 fde/resolver-lp.py fde/2022-04
+
+      - name: Analisar remanescentes
+        run: python3 fde/analisar-sistema.py fde/2022-04
+
+      - name: Testar rank dos remanescentes
+        run: python3 fde/testar-solucao-global.py fde/2022-04
+
+      - name: Publicar resultado na branch
+        shell: bash
+        run: |
+          rm -f fde-2022-04.pdf
+          git config user.name 'fde-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add fde/extrair-v2.mjs fde/2022-04 fde/index.json
+          if git diff --cached --quiet; then
+            echo 'Nenhuma alteração gerada.'
+            exit 0
+          fi
+          git commit -m 'FDE abril 2022: análise LP integral dos preços'
+          git push
