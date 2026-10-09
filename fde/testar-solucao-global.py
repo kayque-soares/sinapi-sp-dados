@@ -6,13 +6,16 @@ from pathlib import Path
 import numpy as np
 
 base = Path(sys.argv[1] if len(sys.argv) > 1 else "fde/2022-04")
+FATOR_BDI = 1.23
 insumos = json.loads((base / "insumos.json").read_text())
 composicoes = json.loads((base / "composicoes.json").read_text())
 estrutura = json.loads((base / "estrutura.json").read_text())
 
 preco = {i["c"]: i.get("p") for i in insumos}
 desconhecidos = {c for c, p in preco.items() if p is None}
-custo = {c["c"]: float(c["p"]) for c in composicoes}
+# O custo oficial está com BDI e truncado. Para o diagnóstico LS usamos o
+# ponto médio do intervalo admissível sem BDI: [C/1,23 ; (C+0,01)/1,23).
+custo = {c["c"]: (float(c["p"]) + 0.005) / FATOR_BDI for c in composicoes}
 
 coef_por_comp = defaultdict(lambda: defaultdict(float))
 for e in estrutura:
@@ -73,11 +76,7 @@ for root, vars_set in sorted(grupos.items(), key=lambda kv: -len(kv[1])):
                 alvo -= k * float(p)
         b[r] = alvo
 
-    reg = {
-        "variaveis": n,
-        "equacoes": m,
-        "codigos_amostra": vars_[:20],
-    }
+    reg = {"variaveis": n, "equacoes": m, "codigos_amostra": vars_[:20]}
     if m < n:
         reg.update({"rank": None, "rank_completo": False, "motivo": "menos_equacoes_que_variaveis"})
         resultados.append(reg)
@@ -106,6 +105,7 @@ for root, vars_set in sorted(grupos.items(), key=lambda kv: -len(kv[1])):
     resultados.append(reg)
 
 resumo = {
+    "modelo": "precos sem BDI; alvo = ponto medio do intervalo de truncamento do custo oficial / 1.23",
     "componentes": resultados,
     "variaveis_rank_completo": sum(r["variaveis"] for r in resultados if r.get("rank_completo")),
     "variaveis_sem_rank_completo": sum(r["variaveis"] for r in resultados if not r.get("rank_completo")),
