@@ -88,13 +88,13 @@
       "variaveis": 1,
       "equacoes": 1,
       "codigos_amostra": [
-        "2.35.32"
+        "3.70.78"
       ],
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 470.12084592145015,
-      "preco_max": 470.12084592145015,
+      "preco_min": 258.21,
+      "preco_max": 258.21,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
@@ -108,13 +108,13 @@
       "variaveis": 1,
       "equacoes": 1,
       "codigos_amostra": [
-        "3.70.78"
+        "2.35.32"
       ],
       "rank": 1,
       "rank_completo": true,
       "condicao": 1.0,
-      "preco_min": 258.21,
-      "preco_max": 258.21,
+      "preco_min": 470.12084592145015,
+      "preco_max": 470.12084592145015,
       "precos_negativos": 0,
       "residuo_max_abs": 0.0,
       "residuo_p95_abs": 0.0,
