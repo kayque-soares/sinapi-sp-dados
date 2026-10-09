@@ -12,19 +12,25 @@
     "composicoes": 3165,
     "estrutura": 17653,
     "status_precos": {
-      "DIVERGENTE": 116,
-      "NAO_DETERMINADO": 1272,
-      "DERIVADO": 813,
-      "CONFIRMADO": 40
+      "CONFIRMADO": 56,
+      "NAO_DETERMINADO": 1433,
+      "DERIVADO": 752
     },
     "validacao": {
       "composicoes": 3165,
-      "ok": 299,
-      "incompletas": 2866,
-      "divergentes": 0,
-      "percentual_ok_total": 9.4471,
-      "percentual_ok_das_completas": 100
+      "ok": 1462,
+      "incompletas": 1680,
+      "divergentes": 23,
+      "percentual_ok_total": 46.1927,
+      "percentual_ok_das_completas": 98.4512,
+      "regra": "custo_oficial = truncar_centavos(custo_sem_bdi * 1.23)"
     }
   },
-  "gerado_em": "2026-10-09T21:40:17.073Z"
+  "gerado_em": "2026-10-09T21:42:29.456Z",
+  "modelo_precos": {
+    "bdi": 0.23,
+    "fator_bdi": 1.23,
+    "regra_centavos": "TRUNCAMENTO",
+    "preco_insumo": "equivalente sem BDI; mão de obra com encargos refletidos no custo efetivo"
+  }
 }
