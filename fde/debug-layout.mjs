@@ -13,10 +13,14 @@ for (const p of [2, 33]) {
     w: Math.round(it.width * 100) / 100,
     s: String(it.str ?? "").replace(/\s+/g, " ").trim(),
   })).filter((i) => i.s);
+  if (p === 2) {
+    const nomes = new Set(["Referência", "Descrição", "UN", "Coeficiente", "Custo Total"]);
+    console.log("DEBUG CABECALHO", JSON.stringify(itens.filter((i) => nomes.has(i.s))));
+  }
   for (const alvo of alvos) {
     const cod = itens.find((i) => i.s === alvo);
     if (!cod) continue;
     console.log(`DEBUG ${alvo} pagina=${p} y=${cod.y}`);
-    console.log(JSON.stringify(itens.filter((i) => Math.abs(i.y - cod.y) <= 4).sort((a,b)=>a.x-b.x)));
+    console.log(JSON.stringify(itens.filter((i) => Math.abs(i.y - cod.y) <= 9).sort((a,b)=>a.y-b.y || a.x-b.x)));
   }
 }
