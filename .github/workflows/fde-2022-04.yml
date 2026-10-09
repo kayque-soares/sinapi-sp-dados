@@ -6,6 +6,7 @@ on:
       - feat/fde-2022-04
     paths:
       - fde/extrair-v2.mjs
+      - fde/reconstruir-precos.py
       - fde/analisar-sistema.py
       - fde/testar-solucao-global.py
       - fde/diagnosticar-centavos.py
@@ -46,11 +47,14 @@ jobs:
         run: |
           sed -i 's/tolerancia = 3.5/tolerancia = 9.0/' fde/extrair-v2.mjs
 
-      - name: Extrair, reconstruir preços determináveis e validar
+      - name: Extrair estrutura oficial do PDF
         run: node --max-old-space-size=4096 fde/extrair-v2.mjs fde-2022-04.pdf
 
       - name: Diagnosticar regra de centavos e BDI
         run: python3 fde/diagnosticar-centavos.py fde/2022-04
+
+      - name: Reconstruir preços equivalentes sem BDI
+        run: python3 fde/reconstruir-precos.py fde/2022-04
 
       - name: Analisar identificabilidade do sistema
         run: python3 fde/analisar-sistema.py fde/2022-04
@@ -69,5 +73,5 @@ jobs:
             echo 'Nenhuma alteração gerada.'
             exit 0
           fi
-          git commit -m 'FDE abril 2022: dados extraídos e diagnósticos atualizados'
+          git commit -m 'FDE abril 2022: modelo sem BDI reconstruído e validado'
           git push
