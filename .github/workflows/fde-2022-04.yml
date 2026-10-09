@@ -1,0 +1,54 @@
+name: Extrair FDE abril 2022
+
+on:
+  push:
+    branches:
+      - feat/fde-2022-04
+    paths:
+      - fde/extrair.mjs
+      - .github/workflows/fde-2022-04.yml
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency: extrair-fde-2022-04
+
+jobs:
+  extrair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci || npm install
+
+      - name: Baixar cópia pública integral da FDE abril/2022
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL_REGISTRO='https://registro.sp.gov.br/publicacoes/docs/445_Anexo%20I%20-%20Termo%20de%20Refer%C3%AAncia%20-%20Tabela-FDE-Abril-2022.pdf'
+          URL_CAIUA='https://mail.caiua.sp.gov.br/clientes/download/4037'
+          if ! curl -fL --retry 3 --retry-delay 2 -A 'Mozilla/5.0' "$URL_REGISTRO" -o fde-2022-04.pdf; then
+            curl -fL --retry 3 --retry-delay 2 -A 'Mozilla/5.0' "$URL_CAIUA" -o fde-2022-04.pdf
+          fi
+          test -s fde-2022-04.pdf
+
+      - name: Extrair, reconstruir preços determináveis e validar
+        run: node --max-old-space-size=4096 fde/extrair.mjs fde-2022-04.pdf
+
+      - name: Publicar resultado na branch
+        shell: bash
+        run: |
+          rm -f fde-2022-04.pdf
+          git config user.name 'fde-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add fde/2022-04 fde/index.json
+          if git diff --cached --quiet; then
+            echo 'Nenhuma alteração gerada.'
+            exit 0
+          fi
+          git commit -m 'FDE abril 2022: dados extraídos e validados'
+          git push
