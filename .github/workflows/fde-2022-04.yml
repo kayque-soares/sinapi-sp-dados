@@ -7,7 +7,7 @@ on:
     paths:
       - fde/extrair-v2.mjs
       - fde/analisar-sistema.py
-      - fde/debug-layout.mjs
+      - fde/testar-solucao-global.py
       - .github/workflows/fde-2022-04.yml
   workflow_dispatch: {}
 
@@ -26,6 +26,8 @@ jobs:
         with:
           node-version: 22
       - run: npm ci || npm install
+      - name: Preparar álgebra linear
+        run: python3 -m pip install --quiet numpy
 
       - name: Baixar cópia pública integral da FDE abril/2022
         shell: bash
@@ -49,6 +51,9 @@ jobs:
       - name: Analisar identificabilidade do sistema
         run: python3 fde/analisar-sistema.py fde/2022-04
 
+      - name: Testar solução global e rank numérico
+        run: python3 fde/testar-solucao-global.py fde/2022-04
+
       - name: Publicar resultado na branch
         shell: bash
         run: |
@@ -60,5 +65,5 @@ jobs:
             echo 'Nenhuma alteração gerada.'
             exit 0
           fi
-          git commit -m 'FDE abril 2022: dados extraídos e analisados'
+          git commit -m 'FDE abril 2022: dados extraídos e solução global testada'
           git push
